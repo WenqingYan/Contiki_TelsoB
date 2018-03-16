@@ -28,7 +28,7 @@ get_temp(void)
 PROCESS_THREAD(send_sensor_info_process, ev, data)
 {
   PROCESS_BEGIN();
-  SENSORS_ACTIVATE(light_sensor);
+  SENSORS_ACTIVATE(light_sensor); //activate the sensor
   SENSORS_ACTIVATE(sht11_sensor);
   printf("Light: %d \n", get_light());
   printf("Temperature: %d \n", get_temp());
